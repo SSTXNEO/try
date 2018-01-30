@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jibba</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+        #name{
+            font-size : 64px;
+            margin-bottom: 15%;
+        }
+        #job{
+            font-size : 80px;
+            margin-top: 15%;
+        }
+        a{
+            color:black;
+        }
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            margin-top:90%;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+            border-color: #737373;
+        }
+        .navbar-custom {
+            margin-bottom: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: black;
+        }
+        .navbar-custom .navbar-toggle {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 12px;
+        }
+        .navbar-custom .navbar-toggle:focus,
+        .navbar-custom .navbar-toggle:active {
+            outline: none;
+        }
+        .navbar-custom .navbar-brand {
+            font-weight: 700;
+        }
+        .navbar-custom .navbar-brand:focus {
+            outline: none;
+        }
+        .navbar-custom a {
+            color: white;
+        }
+        .navbar-custom .nav li a {
+            -webkit-transition: background 0.3s ease-in-out;
+            -moz-transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar-custom .nav li a:hover {
+            color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            background-color: transparent;
+        }
+        .navbar-custom .nav li a:focus,
+        .navbar-custom .nav li a:active {
+            outline: none;
+            background-color: transparent;
+        }
+        .navbar-custom .nav li.active {
+            outline: none;
+        }
+        .navbar-custom .nav li.active a {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .navbar-custom .nav li.active a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="home">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    AC<i class="fa fa-bolt"></i>D3
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from demo link when scrolled up past demo section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#demo1">Demo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div class="text-center">
+        <h1 id="name">WAYNE</h1>
+    </div>
+    <div class="text-center">
+        <h1 id="job">UX DESIGNER &lt;br/&gt;</h1>
+    </div>
+    <div class="center-block" style="width:100px;">
+        <button type="button" class="btn btn-default btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></button>
+    </div>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+    <p>123</p>
+</div>
+
+<script src="bootstrap/bootstrap-4.0.0-alpha.6-dist/js/jquery-3.2.1.min.js"></script>
+<script src="external.js"></script>
+<script src="bootstrap/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="bootstrap/bootstrap-4.0.0-alpha.6-dist/js/jquery.easing.min.js"></script>
+<script>
+    function collapseNavbar() {
+    if ($(".navbar").offset().top > 50) {
+    $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+    $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+    }
+
+    $(window).scroll(collapseNavbar);
+    $(document).ready(collapseNavbar);
+
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
+
+    $(function () {
+    $('a.page-scroll').bind('click', function (event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+    scrollTop: $($anchor.attr('href')).offset().top
+    }, 1500, 'easeInOutExpo');
+    event.preventDefault();
+    });
+    });
+</script>
+</body>
+</html>
