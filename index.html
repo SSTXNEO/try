@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw1</title>
+</head>
+<body style="margin: 0 50px;">
+    <p id="p1">Problem 1 :</p>
+    <img src="./problem1_console_log.png" alt="wifi" style="max-height: 400px;">
+    <script>
+        function my(number){
+            return number+1;
+        }
+        var l=[1,2,3];
+        var d={"name":"tom","age":21};
+        var re = /ab+c/;
+        var s="hello";
+        var t=(1);
+        var less_mark = '\u003c';
+    console.log("boolean variable can be returned as: "+typeof(true));
+    console.log("double variable can be returned as: "+typeof(100.00));
+    console.log("float variable can be returned as: "+typeof(100.0));
+    console.log("function variable can be returned as: "+typeof(my));
+    console.log("int variable can be returned as: "+typeof(100));
+    console.log("list variable can be returned as: "+typeof(l));
+    console.log("map variable can be returned as: "+typeof(d));
+    console.log("number variable can be returned as: "+typeof(100));
+    console.log("object variable can be returned as: "+typeof(d));
+    console.log("regex variable can be returned as: "+typeof(re));
+    console.log("string variable can be returned as: "+typeof(s));
+    console.log("tuple variable can be returned as: "+typeof(t));
+    console.log("undefined variable can be returned as: "+typeof(undefined));
+    console.log("unicode variable can be returned as: "+typeof(less_mark));
+    </script>
+    <p id="p2">Problem 2 :</p>
+    <ol>
+        <li>
+            <p>The error: there is no quotation marks around name</p>
+            <p>Revised: { "name": "Data-driven web applications" }</p>
+            <p id="proof1"></p>
+            <script>
+                var obj=JSON.parse('{ "name": "Data-driven web applications" }');
+                document.querySelector("#proof1").innerHTML = "Prove that it works: "+obj.name;
+            </script>
+        </li>
+        <li>
+            <p>The error: there is no comment in json, if one needs to put some "comment", he can define the comment as a data element</p>
+            <p>Revised: { "comment":"the next variable is a course number","number": 3300 }</p>
+            <p id="proof2"></p>
+            <script>
+                var obj=JSON.parse('{ "comment":"the next variable is a course number","number": 3300 }');
+                document.querySelector("#proof2").innerHTML = "Prove that it works: "+obj.comment+" "+obj.number;
+            </script>
+        </li>
+        <li>
+            <ul>
+                <li>
+                    The error: the array does not have an ending "]"
+                </li>
+                <li>
+                    The error: there is no comma between each element in the array
+                </li>
+            </ul>
+            <p>The revised: [ { "name": "DDWA", "number": 3300 },{ "name": "Java","number": 2110 },{ "name": "Python", "number": 1110 }] </p>
+            <p id="proof3"></p>
+            <script>
+                var list={"list":['{ "name": "DDWA", "number": 3300 }','{ "name": "Java","number": 2110 }','{ "name": "Python", "number": 1110 }']};
+                var proof=[];
+                for (var i=0;i<3;i++){
+                    var obj=JSON.parse(list["list"][i]);
+                    proof.push([obj.name,obj.number]);
+                }
+
+                document.querySelector("#proof3").innerHTML = "Prove that it works: "+proof;
+            </script>
+        </li>
+    </ol>
+    <p id="p3">Problem 3 : </p>
+    <p>
+        {"list":<br/>[{"verified":true,"number":21,"tags":["good","excellent","bad"]},<br/>{"verified":false,"number":12,"tags":["excellent","bad"]},<br/>{"verified":true,"number":18,"tags":["good","bad"]}]<br/>}
+    </p>
+    <p id="p4">Problem 4 : <br/>
+        If students do not submit work late than the deadline, or if they submit an unreadable file that does not contain the
+        correct work, their homework will be recorded as zero with no exceptions. This policy is created for the sake of the size of the class.
+    </p>
+
+</body>
+</html>
